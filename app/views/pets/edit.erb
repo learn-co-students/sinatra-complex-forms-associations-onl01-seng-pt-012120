@@ -5,7 +5,7 @@
 	<input type="hidden" id="hidden" name="_method" value="PATCH">
 	<div class="form-group">
 		<label for="">Pet Name:</label>
-		<input type="text" name="pet[name]" placeholder="Pet Name" class="form-control" value="<%= @pet.name %>">
+		<input type="text" name="pet[name]" placeholder="Pet Name" class="form-control" value="<%= @pet.name %>" id="pet_name">
 	</div>
 <h3>Select Owner</h3>
 <% @owners.each do |owner| %>
@@ -18,10 +18,10 @@
 
 <div class="form-group">
 	<label for="">New Owner Name:</label>
-	<input type="text" class="form-control" placeholder="owner name" name="owner[name]">
+	<input type="text" class="form-control" placeholder="owner name" name="owner[name]" id="owner_name">
 </div>
 	
 
 
-	<input type="submit" class="btn btn-success" id="submit">
+	<input type="submit" class="btn btn-success" value="Update Pet">
 </form>

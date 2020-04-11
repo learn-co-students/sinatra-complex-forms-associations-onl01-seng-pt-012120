@@ -3,23 +3,23 @@
 <form action="/pets" method="POST">
 	<div class="form-group">
 		<label for="">Pet Name:</label>
-		<input type="text" name="pet[name]" placeholder="Pet Name" class="form-control">
+		<input type="text" name="pet[name]" placeholder="Pet Name" class="form-control" id="pet_name">
 	</div>
 <h3>Select Owner</h3>
 <% @owners.each do |owner| %>
 	<div class="form-group form-check">
 
-		<input type="checkbox" class="form-check-input" id="<%= owner.id %>" value="<%= owner.id %>" name="pet[owner_id]">
+		<input type="radio" class="form-check-input" id="<%= owner.id %>" value="<%= owner.id %>" name="pet[owner_id]">
 		<label for="" class="form-check-label"><%= owner.name %></label>
 	</div>
 <% end %>
 
 <div class="form-group">
 	<label for="">New Owner Name:</label>
-	<input type="text" class="form-control" placeholder="owner name" name="owner[name]">
+	<input type="text" class="form-control" placeholder="owner name" name="owner[name]" id="owner_name">
 </div>
 	
 
 
-	<input type="submit" class="btn btn-success" id="submit">
+	<input type="submit" class="btn btn-success" value="Create Pet">
 </form>
