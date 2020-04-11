@@ -1,16 +1,14 @@
+<% @owners.each do |owner| %>
 
-	<% @owners.each do |owner| %>
-		<a href="/owners/<%= owner.id %>"><h1><%= owner.name %></h1></a>
-		<% if !owner.pets.empty? %>
-			<ol> <u>Pets</u>
-				<% owner.pets.each do |pet| %>
-				<li><%= pet.name %></li>
-				<% end %>
-			</ol>
+<div class="card mb-3" style="">
+	<div class="card-header">
+		<a href="/owners/<%= owner.id %>">Owner: <%= owner.name %>:</a>	
+	</div>
+	<ul class="list-group list-group-flush">
+		<% owner.pets.each do |pet| %>
+		<li class="list-group-item"><a href="/pets/<%= pet.id %>"><%= pet.name %></a></li>
 		<% end %>
-	<% end %>
+	</ul>
+</div>
 
-	<p><a href="/owners/new" class="btn btn-secondary">create new owner</a></p>
-	<p><a href="/pets/new" class="btn btn-secondary">create new pet</a></p>
-
-
+<% end %>

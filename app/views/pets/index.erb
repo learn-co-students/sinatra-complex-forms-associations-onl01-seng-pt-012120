@@ -1,6 +1,5 @@
 <ol> <strong>Pets</strong>
 	<% @pets.each do |pet| %>
-		<a href="/pets/<%= pet.id %>"><li><%= pet.name %></li></a>
+		<li><a href="/pets/<%= pet.id %>"><%= pet.name %></a> &mdash; (Owner: <%= !pet.owner.nil? ? pet.owner.name : 'None' %>)</li>
 	<% end %>
 </ol>
-<a href="/pets/new" class="btn btn-secondary">Create New Pet</a>
