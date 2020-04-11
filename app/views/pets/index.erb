@@ -1,1 +1,5 @@
-index.erb
+<ol> <strong>Pets</strong>
+	<% @pets.each do |pet| %>
+		<li><a href="/pets/<%= pet.id %>"><%= pet.name %></a> &mdash; (Owner: <%= !pet.owner.nil? ? pet.owner.name : 'None' %>)</li>
+	<% end %>
+</ol>

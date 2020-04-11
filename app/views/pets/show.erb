@@ -1,1 +1,5 @@
-show.erb
+
+<h1><%= @pet.name %></h1>
+Owner: <%= !@pet.owner.nil? ? @pet.owner.name : "None"  %>
+
+<p><a href="/pets/<%= @pet.id %>/edit" class="btn btn-secondary">edit</a></p>
