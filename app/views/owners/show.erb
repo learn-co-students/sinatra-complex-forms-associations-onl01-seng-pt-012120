@@ -5,3 +5,6 @@
   <li><%=pet.name%></li>
   <%end%>
 </ul>
+<form action="/owners/<%=@pet.id%>/edit" method="get">
+  <h2>Edit Owner</h2>
+  <input type="submit" name="submit" value="Edit Owner">
